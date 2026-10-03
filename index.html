@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Midnight Manuscripts — Eya Oued</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0b0d;
+    color: #e9e5df;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.8;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 25%, rgba(130,130,140,0.15), transparent 30%),
+        linear-gradient(180deg, #101014 0%, #070709 100%);
+}
+
+.moon {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #d8d8d2;
+    position: relative;
+    margin-bottom: 28px;
+    box-shadow: 0 0 45px rgba(220,220,210,0.18);
+}
+
+.moon:after {
+    content: "";
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background: #101014;
+    left: 32px;
+    top: -8px;
+}
+
+.wolf {
+    font-size: 58px;
+    position: absolute;
+    top: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    filter: grayscale(1);
+}
+
+.brand {
+    letter-spacing: 7px;
+    font-size: 15px;
+    color: #bcbcbc;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: clamp(42px, 9vw, 78px);
+    letter-spacing: 5px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.author {
+    font-size: 18px;
+    color: #aaa;
+    letter-spacing: 3px;
+}
+
+.enter {
+    margin-top: 50px;
+    border: 1px solid #555;
+    padding: 12px 28px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.enter:hover {
+    background: #e9e5df;
+    color: #0b0b0d;
+}
+
+/* MAIN */
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 80px 25px;
+}
+
+section {
+    margin-bottom: 100px;
+}
+
+.section-label {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.book-title {
+    font-size: clamp(38px, 8vw, 64px);
+    font-weight: normal;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.byline {
+    color: #999;
+    margin-bottom: 45px;
+}
+
+.divider {
+    width: 70px;
+    height: 1px;
+    background: #555;
+    margin: 30px 0;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+p {
+    margin-bottom: 22px;
+    color: #d5d1cc;
+}
+
+.synopsis {
+    font-size: 18px;
+    line-height: 2;
+}
+
+.contents {
+    border-top: 1px solid #29292d;
+}
+
+.chapter-link {
+    display: block;
+    padding: 17px 5px;
+    border-bottom: 1px solid #29292d;
+    transition: 0.25s;
+}
+
+.chapter-link:hover {
+    padding-left: 12px;
+    color: white;
+}
+
+.chapter-number {
+    color: #777;
+    font-size: 12px;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.chapter {
+    padding-top: 30px;
+    margin-bottom: 100px;
+}
+
+.chapter p {
+    font-size: 17px;
+}
+
+.final {
+    text-align: center;
+    padding: 100px 20px;
+    border-top: 1px solid #29292d;
+}
+
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 1px solid #222;
+    color: #666;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    main {
+        padding: 60px 20px;
+    }
+
+    .chapter p {
+        font-size: 16px;
+    }
+
+    .synopsis {
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="moon"></div>
+    <div class="wolf">🐺</div>
+
+    <div class="brand">Midnight Manuscripts</div>
+
+    <h1>LEMON ON WOUNDS</h1>
+
+    <div class="author">BY EYA OUED</div>
+
+    <a href="#book" class="enter">Enter the story</a>
+
+</header>
+
+
+<main id="book">
+
+<!-- BOOK INTRODUCTION -->
+
+<section>
+
+    <div class="section-label">A Novel by Eya Oued</div>
+
+    <div class="book-title">LEMON ON WOUNDS</div>
+
+    <div class="byline">
+        Published by Midnight Manuscripts
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Synopsis</h2>
+
+    <div class="synopsis">
+
+        <p>
+        By Eya Oued, published by Midnight Manuscripts, is a compelling blend of romance, crime and drama that captivates readers with its intricate narrative and vivid character development.
+        </p>
+
+        <p>
+        The novel features suspenseful crime elements that keep readers on the edge of their seats. Oued’s storytelling is marked by a keen understanding of human emotions and relationships, as she explores the delicate interplay between passion and peril.
+        </p>
+
+        <p>
+        The book’s title, «LEMON ON WOUNDS», metaphorically hints at the painful yet invigorating experiences the characters endure, making it a thought-provoking read that resonates with anyone who has ever navigated the complexities of love amidst chaos.
+        </p>
+
+        <p>
+        With its rich prose and gripping plot, «LEMON ON WOUNDS» promises to be a memorable journey through the highs and lows of the human heart.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- TABLE OF CONTENTS -->
+
+<section>
+
+    <div class="section-label">Contents</div>
+
+    <h2>Table of Contents</h2>
+
+    <div class="contents">
+
+        <a class="chapter-link" href="#chapter1">
+            <span class="chapter-number">CHAPTER 01 · 05</span>
+            A Childhood in Light and Luxury
+        </a>
+
+        <a class="chapter-link" href="#chapter2">
+            <span class="chapter-number">CHAPTER 02 · 09</span>
+            The First Message
+        </a>
+
+        <a class="chapter-link" href="#">
+            <span class="chapter-number">CHAPTER 03 · 12</span>
+            The Scar Beneath the Skin
+        </a>
+
+        <a class="chapter-link" href="#">
+            <span class="chapter-number">CHAPTER 04 · 15</span>
+            When I Went Home
+        </a>
+
+        <a class="chapter-link" href="#">
+            <span class="chapter-number">CHAPTER 05 · 18</span>
+            Silent Changes
+        </a>
+
+        <a class="chapter-link" href="#">
+            <span class="chapter-number">CHAPTER 06 · 21</span>
+            The Arrival of Noah
+        </a>
+
+        <a class="chapter-link" href="#">
+            <span class="chapter-number">CHAPTER 07 · 25</span>
+            The Quiet Rescue
+        </a>
+
+        <a class="chapter-link" href="#">
+            <span class="chapter-number">CHAPTER 08 · 28</span>
+            Confessions and Shadows
+        </a>
+
+        <a class="chapter-link" href="#">
+            <span class="chapter-number">CHAPTER 09 · 32</span>
+            New Year’s Eve Dinner
+        </a>
+
+        <a class="chapter-link" href="#">
+            <span class="chapter-number">CHAPTER 10 · 37</span>
+            The PE Teacher
+        </a>
+
+        <a class="chapter-link" href="#">
+            <span class="chapter-number">CHAPTER 11 · 41</span>
+            The Necklace
+        </a>
+
+        <a class="chapter-link" href="#">
+            <span class="chapter-number">CHAPTER 12 · 45</span>
+            The Meeting in the Garden
+        </a>
+
+        <a class="chapter-link" href="#">
+            <span class="chapter-number">CHAPTER 13 · 48</span>
+            The Lies Between Us
+        </a>
+
+        <a class="chapter-link" href="#">
+            <span class="chapter-number">CHAPTER 14 · 53</span>
+            “He’s Lying to You”
+        </a>
+
+        <a class="chapter-link" href="#">
+            <span class="chapter-number">CHAPTER 15 · 57</span>
+            The Betrayal
+        </a>
+
+        <a class="chapter-link" href="#">
+            <span class="chapter-number">CHAPTER 16 · 61</span>
+            Shadows of Persuasion
+        </a>
+
+        <a class="chapter-link" href="#">
+            <span class="chapter-number">CHAPTER 17 · 64</span>
+            The Agreement
+        </a>
+
+        <a class="chapter-link" href="#">
+            <span class="chapter-number">CHAPTER 18 · 67</span>
+            Through the Eyes of the Past
+        </a>
+
+        <a class="chapter-link" href="#">
+            <span class="chapter-number">CHAPTER 19 · 71</span>
+            The Mask Fell Down
+        </a>
+
+        <a class="chapter-link" href="#">
+            <span class="chapter-number">FINAL · 84</span>
+            Forever Begins
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CHAPTER 1 -->
+
+<section class="chapter" id="chapter1">
+
+    <div class="section-label">Chapter 01 · Page 05</div>
+
+    <h2>A Childhood in Light and Luxury</h2>
+
+    <div class="divider"></div>
+
+    <p>
+    Angela grew up in a grand, sunlit villa nestled in an upscale neighborhood. Marble floors gleamed under crystal chandeliers that scattered delicate rainbows across the walls, and large windows framed sprawling gardens filled with exotic flowers whose fragrances mingled with the crisp scent of trimmed hedges. Her family’s wealth was evident in every detail—from the elegant furniture, upholstered in rich silks and velvets, to the fine art hanging on the walls, each piece telling its own story of sophistication and legacy.
+    </p>
+
+    <p>
+    Despite the luxury surrounding her, Angela was a shy and gentle girl. She preferred the quiet corners of the vast house, where the soft cushions of a reading nook cradled her as she turned the pages of her books or sketched in her notebooks, pencil scratching softly against paper. Far from the bustling world of socialites and formal gatherings, the subtle warmth of sunlight filtering through lace curtains became her companion. The soft hum of classical music often floated through the halls—a distant piano, the occasional violin note—its delicate cadence echoing the rhythm of her contemplative days.
+    </p>
+
+    <p>
+    Her older sister Amelia, three years her senior, was everything Angela admired—confident, radiant, and effortlessly graceful. Amelia was the star of every event, the favorite of their parents, and Angela’s protector and closest confidante. Together, they shared whispered secrets beneath silk sheets, the soft rustle of the fabric hiding their giggles and hushed dreams of worlds beyond their polished walls.
+    </p>
+
+    <p>
+    Their parents were influential and respected: her father, a successful businessman, carried himself with a commanding presence that filled a room, while her mother moved through society with a refined elegance, her voice and gestures leaving a trail of admiration. Though their lives were busy with high-profile commitments, family dinners were cherished moments to reconnect. The long dining table, adorned with fine china and crystal glasses that caught the candlelight like tiny stars, became a sanctuary where laughter, stories, and the aroma of carefully prepared dishes softened the day’s demands.
+    </p>
+
+    <p>
+    At school, Angela’s brilliance shone through quietly. Her intelligence earned admiration, and while she was quiet and reserved, her thoughtful nature made her stand out among her peers. She excelled in her studies, yet often found herself lost in her own world of fairy tales, puzzles, and daydreams—a private realm where imagination ruled and reality’s expectations softened at the edges.
+    </p>
+
+    <p>
+    Her innocence glowed brightly amidst the wealth and glamour, a fragile light untouched by the complexities swirling around her, a quiet, unspoken purity that lingered in every step she took and every glance she offered to the world.
+    </p>
+
+</section>
+
+
+<!-- CHAPTER 2 -->
+
+<section class="chapter" id="chapter2">
+
+    <div class="section-label">Chapter 02 · Page 09</div>
+
+    <h2>The First Message</h2>
+
+    <div class="divider"></div>
+
+    <p>
+    Angela’s ninth birthday was a grand affair, held in their lush garden under strings of sparkling lights that twinkled like stars against the velvet night. The air was scented with blooming jasmine and roses, mingling with the sweet aroma of freshly baked cakes and pastries. Family and friends, dressed in their finest silks and satins, mingled and laughed, their voices creating a soft hum of celebration that wrapped around her like a warm blanket. Yet, amidst the music, laughter, and glittering decorations, Angela’s greatest gift lay in something small and elegant: a sleek, new phone, its screen smooth and full of possibility, promising worlds beyond her immediate reach.
+    </p>
+
+    <p>
+    That night, as the villa’s lights dimmed and shadows stretched across the polished floors, Angela curled beneath her soft, embroidered duvet. The room was silent except for the faint ticking of a clock and the occasional rustle of leaves outside her window. Then, a gentle vibration on the phone startled her. A message appeared on the screen.
+    </p>
+
+    <p>
+    <em>"Hi, I want to be your friend."</em>
+    </p>
+
+    <p>
+    Angela’s heart skipped. She didn’t know who had sent it. The sender’s identity was a mystery—no name, no picture, just words floating in a digital space that felt intimate and yet unknown. At first, the messages were simple, innocent: kind words, curious questions about her day, gentle compliments that made her feel noticed in a way she never had before. Each notification brought a flutter of excitement, a warmth in her chest, a sense of being seen and understood. She felt special.
+    </p>
+
+    <p>
+    But slowly, the messages began to change. The tone became more secretive, more insistent. Words that once comforted her now carried a subtle weight, a quiet insistence.
+    </p>
+
+    <p>
+    <em>"Don’t tell anyone," they warned. "It’s our secret."</em>
+    </p>
+
+    <p>
+    Naive and trusting, Angela didn’t question the demand. There was something intoxicating about the attention, about the sense of having a secret world all to herself. She pressed the phone closer, her small fingers trembling slightly as she typed her responses, unaware of the quiet tension growing beneath the thrill.
+    </p>
+
+    <p>
+    Then came the day the boy asked to meet her.
+    </p>
+
+    <p>
+    Fear prickled at her skin like tiny sparks, yet it was mixed with hope—a small, innocent part of her longing for a friend, someone who truly understood her. Her pulse quickened at the thought, the room suddenly feeling too warm, the air too thick. She didn’t know that this meeting, this seemingly small step into a new friendship, would mark the beginning of the end of her childhood innocence, a line crossed quietly but irrevocably.
+    </p>
+
+</section>
+
+
+<section class="final">
+
+    <div class="section-label">More to come</div>
+
+    <h2>The story continues...</h2>
+
+    <p>
+    New chapters will be published here as Midnight Manuscripts grows.
+    </p>
+
+</section>
+
+</main>
+
+
+<footer>
+    MIDNIGHT MANUSCRIPTS · EYA OUED
+</footer>
+
+</body>
+</html>
