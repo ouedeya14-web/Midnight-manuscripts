@@ -1,0 +1,21 @@
+media:
+  input: media
+  output: /media
+
+content:
+  - name: chapters
+    label: Chapters
+    type: collection
+    path: chapters
+    filename: "{primary}.md"
+    fields:
+      - name: title
+        label: Chapter Title
+        type: string
+      - name: description
+        label: Extended Description
+        type: string
+        required: false
+      - name: body
+        label: Chapter Text
+        type: rich-text
