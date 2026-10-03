@@ -271,7 +271,7 @@ async function loadCMSChapters() {
     for (const file of chapters) {
       const raw = await fetch(file.download_url).then(r => r.text());
 
-      const titleMatch = raw.match(/title:\s*["']?(.+?)["']?\s*$/m);
+    const titleMatch = raw.match(/title:\s*["']?(.+?)["']?\s*$/m);
       const title = titleMatch ? titleMatch[1] : file.name.replace(".md", "");
 
       const content = raw
@@ -587,7 +587,7 @@ async function loadCMSChapters() {
       .sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
 
     const container = document.getElementById("cms-chapters");
-
+container.parentElement.before(container);
     for (const file of chapters) {
       const raw = await fetch(file.download_url).then(r => r.text());
 
