@@ -566,7 +566,58 @@ loadCMSChapters();
     <p>
     New chapters will be published here as Midnight Manuscripts grows.
     </p>
+<div id="cms-chapters"></div>
 
+<script>
+async function loadCMSChapters() {
+  const repo = "Midnight-Manuscripts";
+  const owner = "ouedeya14-web";
+
+  try {
+    const response = await fetch(
+      `https://api.github.com/repos/${owner}/${repo}/contents/chapters`
+    );
+
+    if (!response.ok) return;
+
+    const files = await response.json();
+
+    const chapters = files
+      .filter(file => file.name.endsWith(".md"))
+      .sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
+
+    const container = document.getElementById("cms-chapters");
+
+    for (const file of chapters) {
+      const raw = await fetch(file.download_url).then(r => r.text());
+
+      const titleMatch = raw.match(/title:\s*["']?(.+?)["']?\s*$/m);
+      const title = titleMatch
+        ? titleMatch[1]
+        : file.name.replace(".md", "");
+
+      const content = raw.replace(/^---[\s\S]*?---/, "").trim();
+
+      const article = document.createElement("article");
+      article.style.maxWidth = "900px";
+      article.style.margin = "70px auto";
+      article.style.padding = "0 25px";
+      article.style.lineHeight = "1.8";
+
+      article.innerHTML = `
+        <h2>${title}</h2>
+        <div style="white-space: pre-wrap;">${content}</div>
+      `;
+
+      container.appendChild(article);
+    }
+  } catch (error) {
+    console.log("CMS chapters could not be loaded.");
+  }
+}
+
+loadCMSChapters();
+</script>
 </section>
 
 </main>
