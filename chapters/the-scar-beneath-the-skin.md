@@ -1,8 +1,6 @@
 ---
 title: The scar Beneath the skin
 ---
-
-
 The day he asked Angela to meet him, her small heart fluttered with a mix of nervous excitement and unease. She had never seen him—only read his messages, soft, secretive, coaxing her to keep their friendship hidden. Each word had seemed gentle, almost kind, but a faint whisper of doubt tickled the back of her mind. 
 
 She waited alone in the shadowed garden behind her family's grand villa. The air was cool against her skin, carrying the scent of damp earth and blooming flowers, a sharp contrast to the unease gnawing at her chest. She tried to focus on the sunlight filtering through the trees, but her thoughts kept circling back to the unknown figure she was about to meet. 
